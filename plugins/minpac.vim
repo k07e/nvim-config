@@ -9,6 +9,7 @@ function! PackInit() abort
   packadd minpac
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
+  call minpac#add('axvr/photon.vim', {'type': 'opt'})
 endfunction
 
 if !exists('g:loaded_minpac')
@@ -20,4 +21,5 @@ if !exists('g:loaded_minpac')
   call feedkeys(' ')
   finish
 else
+  call execute('source ' . g:plugins_dir . '/photon.vim')
 endif
