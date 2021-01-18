@@ -12,5 +12,5 @@ let g:cache_dir   = g:base_dir . '/cache'
 let g:plugins_dir = g:base_dir . '/plugins'
 let g:core_dir    = g:base_dir . '/core'
 
-call execute('source ' . g:plugins_dir . '/minpac.vim')
 call execute('source ' . g:core_dir . '/basic.vim')
+call execute('source ' . g:plugins_dir . '/minpac.vim')
