@@ -55,6 +55,6 @@ else
   call execute('source ' . g:setting_dir . '/lexiv.vim')
 endif
 
-command! PackUpdate call PackInit() | call minpac#update()
-command! PackClean  call PackInit() | call minpac#clean()
+command! PackUpdate call execute('source ' . s:this_file) | call PackInit() | call minpac#update()
+command! PackClean  call execute('source ' . s:this_file) | call PackInit() | call minpac#clean()
 command! PackStatus packadd minpac | call minpac#status()
