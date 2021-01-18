@@ -10,6 +10,10 @@ function! PackInit() abort
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
   call minpac#add('axvr/photon.vim', {'type': 'opt'})
+
+  " Git
+  call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
+  call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
 endfunction
 
 if !exists('g:loaded_minpac')
@@ -23,4 +27,7 @@ if !exists('g:loaded_minpac')
 else
   call PackInit()
   call execute('source ' . g:plugins_dir . '/photon.vim')
+
+  call execute('source ' . g:plugins_dir . '/fugitive.vim')
+  call execute('source ' . g:plugins_dir . '/gitgutter.vim')
 endif
