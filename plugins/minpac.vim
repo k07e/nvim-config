@@ -14,6 +14,10 @@ function! PackInit() abort
   " Git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
   call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
+
+  " Goyo.vim
+  call minpac#add('junegunn/goyo.vim', {'type': 'opt'})
+  call minpac#add('junegunn/limelight.vim', {'type': 'opt'})
 endfunction
 
 if !exists('g:loaded_minpac')
@@ -31,6 +35,10 @@ else
   " Git
   call execute('source ' . g:plugins_dir . '/fugitive.vim')
   call execute('source ' . g:plugins_dir . '/gitgutter.vim')
+
+  " Goyo.vim
+  call execute('source ' . g:plugins_dir . '/goyo.vim')
+  call execute('source ' . g:plugins_dir . '/limelight.vim')
 endif
 
 command! PackUpdate call PackInit() | call minpac#update()
