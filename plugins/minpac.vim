@@ -31,3 +31,7 @@ else
   call execute('source ' . g:plugins_dir . '/fugitive.vim')
   call execute('source ' . g:plugins_dir . '/gitgutter.vim')
 endif
+
+command! PackUpdate call PackInit() | call minpac#update()
+command! PackClean  call PackInit() | call minpac#clean()
+command! PackStatus packadd minpac | call minpac#status()
