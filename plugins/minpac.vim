@@ -21,5 +21,6 @@ if !exists('g:loaded_minpac')
   call feedkeys(' ')
   finish
 else
+  call PackInit()
   call execute('source ' . g:plugins_dir . '/photon.vim')
 endif
