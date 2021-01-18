@@ -21,6 +21,9 @@ function! PackInit() abort
   " Goyo.vim
   call minpac#add('junegunn/goyo.vim', {'type': 'opt'})
   call minpac#add('junegunn/limelight.vim', {'type': 'opt'})
+
+  " Editor
+  call minpac#add('editorconfig/editorconfig-vim', {'type': 'opt'})
 endfunction
 
 if !exists('g:loaded_minpac')
@@ -45,6 +48,9 @@ else
   " Goyo.vim
   call execute('source ' . g:plugins_dir . '/goyo.vim')
   call execute('source ' . g:plugins_dir . '/limelight.vim')
+
+  " Editor
+  call execute('source ' . g:plugins_dir . '/editorconfig.vim')
 endif
 
 command! PackUpdate call PackInit() | call minpac#update()
