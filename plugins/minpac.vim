@@ -9,7 +9,10 @@ function! PackInit() abort
   packadd minpac
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+  " Look
   call minpac#add('axvr/photon.vim', {'type': 'opt'})
+  call minpac#add('kjwon15/vim-transparent', {'type': 'opt'})
 
   " Git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
@@ -30,7 +33,10 @@ if !exists('g:loaded_minpac')
   finish
 else
   call PackInit()
+
+  " Look
   call execute('source ' . g:plugins_dir . '/photon.vim')
+  call execute('source ' . g:plugins_dir . '/transparent.vim')
 
   " Git
   call execute('source ' . g:plugins_dir . '/fugitive.vim')
