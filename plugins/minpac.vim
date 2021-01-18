@@ -28,6 +28,7 @@ else
   call PackInit()
   call execute('source ' . g:plugins_dir . '/photon.vim')
 
+  " Git
   call execute('source ' . g:plugins_dir . '/fugitive.vim')
   call execute('source ' . g:plugins_dir . '/gitgutter.vim')
 endif
