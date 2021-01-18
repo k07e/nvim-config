@@ -9,8 +9,7 @@ endfunction
 
 let g:base_dir    = s:this_dir . (($NVIM_CONFIG_INITRC != '' && !IsSymlink($NVIM_CONFIG_INITRC)) ? '/.nvim-config' : '')
 let g:cache_dir   = g:base_dir . '/cache'
-let g:plugins_dir = g:base_dir . '/plugins'
-let g:core_dir    = g:base_dir . '/core'
+let g:setting_dir = g:base_dir . '/settings'
 
-call execute('source ' . g:core_dir . '/basic.vim')
-call execute('source ' . g:plugins_dir . '/minpac.vim')
+call execute('source ' . g:setting_dir . '/basic.vim')
+call execute('source ' . g:setting_dir . '/minpac.vim')

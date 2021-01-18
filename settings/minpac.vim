@@ -39,20 +39,20 @@ else
   call PackInit()
 
   " Look
-  call execute('source ' . g:plugins_dir . '/photon.vim')
-  call execute('source ' . g:plugins_dir . '/transparent.vim')
+  call execute('source ' . g:setting_dir . '/photon.vim')
+  call execute('source ' . g:setting_dir . '/transparent.vim')
 
   " Git
-  call execute('source ' . g:plugins_dir . '/fugitive.vim')
-  call execute('source ' . g:plugins_dir . '/gitgutter.vim')
+  call execute('source ' . g:setting_dir . '/fugitive.vim')
+  call execute('source ' . g:setting_dir . '/gitgutter.vim')
 
   " Goyo.vim
-  call execute('source ' . g:plugins_dir . '/goyo.vim')
-  call execute('source ' . g:plugins_dir . '/limelight.vim')
+  call execute('source ' . g:setting_dir . '/goyo.vim')
+  call execute('source ' . g:setting_dir . '/limelight.vim')
 
   " Editor
-  call execute('source ' . g:plugins_dir . '/editorconfig.vim')
-  call execute('source ' . g:plugins_dir . '/lexiv.vim')
+  call execute('source ' . g:setting_dir . '/editorconfig.vim')
+  call execute('source ' . g:setting_dir . '/lexiv.vim')
 endif
 
 command! PackUpdate call PackInit() | call minpac#update()
