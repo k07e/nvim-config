@@ -24,6 +24,7 @@ function! PackInit() abort
 
   " Editor
   call minpac#add('editorconfig/editorconfig-vim', {'type': 'opt'})
+  call minpac#add('mattn/vim-lexiv', {'type': 'opt'})
 endfunction
 
 if !exists('g:loaded_minpac')
@@ -51,6 +52,7 @@ else
 
   " Editor
   call execute('source ' . g:plugins_dir . '/editorconfig.vim')
+  call execute('source ' . g:plugins_dir . '/lexiv.vim')
 endif
 
 command! PackUpdate call PackInit() | call minpac#update()
