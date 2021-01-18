@@ -25,6 +25,12 @@ function! PackInit() abort
   " Editor
   call minpac#add('editorconfig/editorconfig-vim', {'type': 'opt'})
   call minpac#add('mattn/vim-lexiv', {'type': 'opt'})
+  call minpac#add('prabirshrestha/asyncomplete.vim', {'type': 'opt'})
+    call minpac#add('prabirshrestha/asyncomplete-lsp.vim', {'type': 'opt'})
+
+  " Language Server
+  call minpac#add('prabirshrestha/vim-lsp', {'type': 'opt'})
+    call minpac#add('mattn/vim-lsp-settings', {'type': 'opt'})
 endfunction
 
 if !exists('g:loaded_minpac')
@@ -53,6 +59,10 @@ else
   " Editor
   call execute('source ' . g:setting_dir . '/editorconfig.vim')
   call execute('source ' . g:setting_dir . '/lexiv.vim')
+  call execute('source ' . g:setting_dir . '/asyncomplete.vim')
+
+  " Language Server
+  call execute('source ' . g:setting_dir . '/lsp.vim')
 endif
 
 command! PackUpdate call execute('source ' . s:this_file) | call PackInit() | call minpac#update()
