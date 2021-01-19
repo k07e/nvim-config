@@ -29,6 +29,7 @@ function! PackInit() abort
   call minpac#add('mattn/vim-lexiv', {'type': 'opt'})
   call minpac#add('prabirshrestha/asyncomplete.vim', {'type': 'opt'})
     call minpac#add('prabirshrestha/asyncomplete-lsp.vim', {'type': 'opt'})
+  call minpac#add('tpope/vim-commentary', {'type': 'opt'})
 
   " Language Server
   call minpac#add('prabirshrestha/vim-lsp', {'type': 'opt'})
@@ -63,6 +64,7 @@ else
   call execute('source ' . g:setting_dir . '/editorconfig.vim')
   call execute('source ' . g:setting_dir . '/lexiv.vim')
   call execute('source ' . g:setting_dir . '/asyncomplete.vim')
+  call execute('source ' . g:setting_dir . '/commentary.vim')
 
   " Language Server
   call execute('source ' . g:setting_dir . '/lsp.vim')
