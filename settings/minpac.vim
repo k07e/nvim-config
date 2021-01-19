@@ -76,6 +76,10 @@ else
   call execute('source ' . g:setting_dir . '/lsp.vim')
 endif
 
-command! PackUpdate call execute('source ' . s:this_file) | call PackInit() | call minpac#update()
+function! PostPackUpdate()
+  call TransparentLightlineMiddle()
+endfunction
+
+command! PackUpdate call execute('source ' . s:this_file) | call PackInit() | call minpac#update('', {'do': 'call execute(''source ' . s:this_file . ' | quit | call PostPackUpdate()'')'})
 command! PackClean  call execute('source ' . s:this_file) | call PackInit() | call minpac#clean()
 command! PackStatus packadd minpac | call minpac#status()
