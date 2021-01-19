@@ -33,6 +33,8 @@ function! PackInit() abort
   call minpac#add('tpope/vim-commentary', {'type': 'opt'})
   call minpac#add('sheerun/vim-polyglot', {'type': 'opt'})
   call minpac#add('ctrlpvim/ctrlp.vim', {'type': 'opt'})
+  call minpac#add('hrsh7th/vim-vsnip', {'type': 'opt'})
+    call minpac#add('hrsh7th/vim-vsnip-integ', {'type': 'opt'})
 
   " Language Server
   call minpac#add('prabirshrestha/vim-lsp', {'type': 'opt'})
