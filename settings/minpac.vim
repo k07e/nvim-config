@@ -15,6 +15,7 @@ function! PackInit() abort
   call minpac#add('kjwon15/vim-transparent', {'type': 'opt'})
   call minpac#add('itchyny/lightline.vim', {'type': 'opt'})
   call minpac#add('ryanoasis/vim-devicons', {'type': 'opt'})
+  call minpac#add('mhinz/vim-startify', {'type': 'opt'})
 
   " Git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
@@ -57,6 +58,7 @@ else
   call execute('source ' . g:setting_dir . '/transparent.vim')
   call execute('source ' . g:setting_dir . '/lightline.vim')
   call execute('source ' . g:setting_dir . '/devicons.vim')
+  call execute('source ' . g:setting_dir . '/startify.vim')
 
   " Git
   call execute('source ' . g:setting_dir . '/fugitive.vim')
