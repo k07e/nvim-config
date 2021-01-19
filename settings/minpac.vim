@@ -16,6 +16,7 @@ function! PackInit() abort
 
   " Git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
+    call minpac#add('junegunn/gv.vim', {'type': 'opt'})
   call minpac#add('airblade/vim-gitgutter', {'type': 'opt'})
 
   " Goyo.vim
