@@ -13,6 +13,7 @@ function! PackInit() abort
   " Look
   call minpac#add('axvr/photon.vim', {'type': 'opt'})
   call minpac#add('kjwon15/vim-transparent', {'type': 'opt'})
+  call minpac#add('itchyny/lightline.vim', {'type': 'opt'})
 
   " Git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
@@ -48,6 +49,7 @@ else
   " Look
   call execute('source ' . g:setting_dir . '/photon.vim')
   call execute('source ' . g:setting_dir . '/transparent.vim')
+  call execute('source ' . g:setting_dir . '/lightline.vim')
 
   " Git
   call execute('source ' . g:setting_dir . '/fugitive.vim')
