@@ -13,6 +13,7 @@ nvim -u init.vim
 
 ```
 git clone https://github.com/k07e/nvim-config.git ~/.cache/k07e--nvim-config
+mkdir -pv ~/.config/nvim
 export NVIM_CONFIG_INITRC=~/.config/nvim/init.vim
 ln -fsv ~/.cache/k07e--nvim-config/init.vim "$NVIM_CONFIG_INITRC"
 nvim -u "$NVIM_CONFIG_INITRC"
@@ -20,7 +21,7 @@ nvim -u "$NVIM_CONFIG_INITRC"
 
 You can set alias: `alias nvim='nvim -u "$NVIM_CONFIG_INITRC"'`
 
-### Use as development
+### Test to try
 
 ```
 git clone https://github.com/k07e/nvim-config.git
