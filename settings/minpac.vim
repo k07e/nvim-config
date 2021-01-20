@@ -14,6 +14,7 @@ function! PackInit() abort
   call minpac#add('axvr/photon.vim', {'type': 'opt'})
   call minpac#add('kjwon15/vim-transparent', {'type': 'opt'})
   call minpac#add('itchyny/lightline.vim', {'type': 'opt'})
+    call minpac#add('k07e/lightline-photon.vim', {'type': 'opt'})
   call minpac#add('ryanoasis/vim-devicons', {'type': 'opt'})
   call minpac#add('mhinz/vim-startify', {'type': 'opt'})
   call minpac#add('Yggdroot/indentLine', {'type': 'opt'})
@@ -87,7 +88,6 @@ else
 endif
 
 function! PostPackUpdate()
-  call TransparentLightlineMiddle()
 endfunction
 
 command! PackUpdate call execute('source ' . s:this_file) | call PackInit() | call minpac#update('', {'do': 'call execute(''source ' . s:this_file . ' | quit | call PostPackUpdate()'')'})
