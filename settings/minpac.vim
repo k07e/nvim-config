@@ -46,6 +46,7 @@ function! PackInit() abort
   call minpac#add('tpope/vim-surround', {'type': 'opt'})
   call minpac#add('tpope/vim-repeat', {'type': 'opt'})
   call minpac#add('tpope/vim-eunuch', {'type': 'opt'})
+  call minpac#add('junegunn/vim-easy-align', {'type': 'opt'})
 
   " Language Server
   call minpac#add('prabirshrestha/vim-lsp', {'type': 'opt'})
@@ -94,6 +95,7 @@ else
   call execute('source ' . g:setting_dir . '/surround.vim')
   call execute('source ' . g:setting_dir . '/repeat.vim')
   call execute('source ' . g:setting_dir . '/eunuch.vim')
+  call execute('source ' . g:setting_dir . '/easy-align.vim')
 
   " Language Server
   call execute('source ' . g:setting_dir . '/lsp.vim')
