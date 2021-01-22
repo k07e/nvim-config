@@ -16,6 +16,7 @@ let g:which_key_map.p = {
 
 let g:which_key_map.t = {
   \ 'name': '+Toggle',
+  \ 'a': [':AutoSaveToggle', 'AutoSave'],
   \ 'g': [':Goyo', 'Goyo'],
   \ 't': [':TransparantToggle', 'Transparent'],
   \ 'l': [':call lightline#toggle()', 'lightline'],
