@@ -43,6 +43,7 @@ function! PackInit() abort
     call minpac#add('hrsh7th/vim-vsnip-integ', {'type': 'opt'})
   call minpac#add('liuchengxu/vim-which-key', {'type': 'opt'})
   call minpac#add('thinca/vim-quickrun', {'type': 'opt'})
+  call minpac#add('tpope/vim-surround', {'type': 'opt'})
 
   " Language Server
   call minpac#add('prabirshrestha/vim-lsp', {'type': 'opt'})
@@ -88,6 +89,7 @@ else
   call execute('source ' . g:setting_dir . '/ctrlp.vim')
   call execute('source ' . g:setting_dir . '/which-key.vim')
   call execute('source ' . g:setting_dir . '/quickrun.vim')
+  call execute('source ' . g:setting_dir . '/surround.vim')
 
   " Language Server
   call execute('source ' . g:setting_dir . '/lsp.vim')
