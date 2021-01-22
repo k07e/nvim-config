@@ -48,6 +48,7 @@ function! PackInit() abort
   call minpac#add('tpope/vim-eunuch', {'type': 'opt'})
   call minpac#add('junegunn/vim-easy-align', {'type': 'opt'})
   call minpac#add('907th/vim-auto-save', {'type': 'opt'})
+  call minpac#add('vim-jp/vimdoc-ja', {'type': 'opt'})
 
   " Language Server
   call minpac#add('prabirshrestha/vim-lsp', {'type': 'opt'})
@@ -98,6 +99,7 @@ else
   call execute('source ' . g:setting_dir . '/eunuch.vim')
   call execute('source ' . g:setting_dir . '/easy-align.vim')
   call execute('source ' . g:setting_dir . '/auto-save.vim')
+  call execute('source ' . g:setting_dir . '/vimdoc-ja.vim')
 
   " Language Server
   call execute('source ' . g:setting_dir . '/lsp.vim')
