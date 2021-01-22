@@ -19,6 +19,7 @@ function! PackInit() abort
   call minpac#add('mhinz/vim-startify', {'type': 'opt'})
   call minpac#add('Yggdroot/indentLine', {'type': 'opt'})
   call minpac#add('chrisbra/Colorizer', {'type': 'opt'})
+  " call minpac#add('jeffkreeftmeijer/vim-dim', {'type': 'opt'})
 
   " Git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
@@ -66,6 +67,7 @@ else
   call execute('source ' . g:setting_dir . '/startify.vim')
   call execute('source ' . g:setting_dir . '/indentLine.vim')
   call execute('source ' . g:setting_dir . '/Colorizer.vim')
+  " call execute('source ' . g:setting_dir . '/dim.vim')
 
   " Git
   call execute('source ' . g:setting_dir . '/fugitive.vim')
