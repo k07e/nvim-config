@@ -17,9 +17,10 @@ function! PackInit() abort
     call minpac#add('k07e/lightline-photon.vim', {'type': 'opt'})
   call minpac#add('ryanoasis/vim-devicons', {'type': 'opt'})
   call minpac#add('mhinz/vim-startify', {'type': 'opt'})
-  call minpac#add('Yggdroot/indentLine', {'type': 'opt'})
+  " call minpac#add('Yggdroot/indentLine', {'type': 'opt'})
   call minpac#add('chrisbra/Colorizer', {'type': 'opt'})
   " call minpac#add('jeffkreeftmeijer/vim-dim', {'type': 'opt'})
+  call minpac#add('nathanaelkane/vim-indent-guides', {'type': 'opt'})
 
   " Git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
@@ -65,9 +66,10 @@ else
   call execute('source ' . g:setting_dir . '/lightline.vim')
   call execute('source ' . g:setting_dir . '/devicons.vim')
   call execute('source ' . g:setting_dir . '/startify.vim')
-  call execute('source ' . g:setting_dir . '/indentLine.vim')
+  " call execute('source ' . g:setting_dir . '/indentLine.vim')
   call execute('source ' . g:setting_dir . '/Colorizer.vim')
   " call execute('source ' . g:setting_dir . '/dim.vim')
+  call execute('source ' . g:setting_dir . '/indent-guides.vim')
 
   " Git
   call execute('source ' . g:setting_dir . '/fugitive.vim')
