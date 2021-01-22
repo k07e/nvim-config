@@ -44,6 +44,7 @@ function! PackInit() abort
   call minpac#add('liuchengxu/vim-which-key', {'type': 'opt'})
   call minpac#add('thinca/vim-quickrun', {'type': 'opt'})
   call minpac#add('tpope/vim-surround', {'type': 'opt'})
+  call minpac#add('tpope/vim-repeat', {'type': 'opt'})
 
   " Language Server
   call minpac#add('prabirshrestha/vim-lsp', {'type': 'opt'})
@@ -90,6 +91,7 @@ else
   call execute('source ' . g:setting_dir . '/which-key.vim')
   call execute('source ' . g:setting_dir . '/quickrun.vim')
   call execute('source ' . g:setting_dir . '/surround.vim')
+  call execute('source ' . g:setting_dir . '/repeat.vim')
 
   " Language Server
   call execute('source ' . g:setting_dir . '/lsp.vim')
