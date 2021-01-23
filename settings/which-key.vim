@@ -12,12 +12,14 @@ function! PhotonToggle()
     let g:lightline.colorscheme = 'antiphoton'
     call lightline#init()
     call lightline#colorscheme()
+    call lightline#update()
   else
     colorscheme photon
     let g:colors_name = 'photon'
     let g:lightline.colorscheme = 'photon'
     call lightline#init()
     call lightline#colorscheme()
+    call lightline#update()
   endif
 endfunction
 
