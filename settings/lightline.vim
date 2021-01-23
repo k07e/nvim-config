@@ -27,17 +27,8 @@ let g:lightline = {
   \ 'tabline_subseparator': {'left': '', 'right': ''}
   \ }
 
-let g:lightline.active.left = [
-  \ ['mode', 'autosave', 'paste'],
-  \ ['readonly', 'filename', 'modified']
-  \ ]
-
-let g:lightline.active.right = [
-  \ ['lineinfo'],
-  \ ['percent'],
-  \ ['fticon', 'fficon', 'fileencoding'],
-  \ ]
-
+let g:lightline.active.left = [['mode', 'autosave', 'paste'], ['readonly', 'filename', 'modified']]
+let g:lightline.active.right = [['lineinfo'], ['percent'], ['fticon', 'fficon', 'fileencoding']]
 let g:lightline.inactive.left = [['filename', 'modified']]
 let g:lightline.inactive.right = [['lineinfo'], ['percent'], ['fticon']]
 
