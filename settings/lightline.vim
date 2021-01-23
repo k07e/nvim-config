@@ -45,6 +45,20 @@ let g:lightline.tab_component_function = {
   \ 'fticon': 'LightlineTabComponent_fticon',
   \ }
 
+let g:lightline.mode_map = {
+  \ 'n': 'N',
+  \ 'i': 'I',
+  \ 'R': 'R',
+  \ 'v': 'V',
+  \ 'V': 'V-L',
+  \ "\<C-v>": 'V-B',
+  \ 'c': 'C',
+  \ 's': 'S',
+  \ 'S': 'S-L',
+  \ "\<C-s>": 'S-B',
+  \ 't': 'T',
+  \ }
+
 call execute('source ' . g:setting_dir . '/lightline-photon.vim')
 set laststatus=2
 set noshowmode
