@@ -1,6 +1,7 @@
 " Look
 set list
 set listchars=eol:↵,tab:»-,trail:·,extends:»,precedes:«,nbsp:%
+set nowrap
 set number
 set relativenumber
 
