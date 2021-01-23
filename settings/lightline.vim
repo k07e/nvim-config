@@ -59,7 +59,8 @@ let g:lightline.mode_map = {
   \ 't': 'T',
   \ }
 
-call execute('source ' . g:setting_dir . '/lightline-photon.vim')
 set laststatus=2
 set noshowmode
 set showtabline=2
+
+call execute('source ' . g:setting_dir . '/lightline-photon.vim')
