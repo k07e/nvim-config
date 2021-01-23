@@ -5,6 +5,22 @@ let g:maplocalleader = ','
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
+function! PhotonToggle()
+  if g:colors_name == 'photon'
+    colorscheme antiphoton
+    let g:colors_name = 'antiphoton'
+    let g:lightline.colorscheme = 'antiphoton'
+    call lightline#init()
+    call lightline#colorscheme()
+  else
+    colorscheme photon
+    let g:colors_name = 'photon'
+    let g:lightline.colorscheme = 'photon'
+    call lightline#init()
+    call lightline#colorscheme()
+  endif
+endfunction
+
 let g:which_key_map = {}
 
 let g:which_key_map.p = {
@@ -17,6 +33,7 @@ let g:which_key_map.p = {
 let g:which_key_map.t = {
   \ 'name': '+Toggle',
   \ 'a': [':AutoSaveToggle', 'AutoSave'],
+  \ 'b': [':call PhotonToggle()', 'Background'],
   \ 'g': [':Goyo', 'Goyo'],
   \ 'p': [':set invpaste', 'Paste'],
   \ 't': [':TransparantToggle', 'Transparent'],
