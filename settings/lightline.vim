@@ -4,6 +4,11 @@ function! LightlineComponent_autosave()
   return g:auto_save ? 'AUTOSAVE' : ''
 endfunction
 
+function! LightlineComponent_colorizer()
+  lua vim.api.nvim_set_var('lightline_component_colorizer_result', require 'colorizer'.is_buffer_attached(0) and 1 or 0)
+  return g:lightline_component_colorizer_result ? 'COLORIZER' : ''
+endfunction
+
 function! LightlineComponent_fficon()
   return &fileformat == 'unix' ? '' : &fileformat == 'dos' ? '' : &fileformat == 'mac' ? '' : &fileformat
 endfunction
@@ -27,13 +32,14 @@ let g:lightline = {
   \ 'tabline_subseparator': {'left': '', 'right': ''}
   \ }
 
-let g:lightline.active.left = [['mode', 'autosave', 'paste'], ['readonly', 'filename', 'modified']]
+let g:lightline.active.left = [['mode', 'autosave', 'paste', 'colorizer'], ['readonly', 'filename', 'modified']]
 let g:lightline.active.right = [['lineinfo'], ['percent'], ['fticon', 'fficon', 'fileencoding']]
 let g:lightline.inactive.left = [['filename', 'modified']]
 let g:lightline.inactive.right = [['lineinfo'], ['percent'], ['fticon']]
 
 let g:lightline.component_function = {
   \ 'autosave': 'LightlineComponent_autosave',
+  \ 'colorizer': 'LightlineComponent_colorizer',
   \ 'fficon': 'LightlineComponent_fficon',
   \ 'fticon': 'LightlineComponent_fticon',
   \ }

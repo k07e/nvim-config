@@ -36,7 +36,7 @@ let g:which_key_map.T = {
   \ 'name': '+Toggle',
   \ 'a': [':AutoSaveToggle', 'AutoSave'],
   \ 'b': [':call PhotonToggle()', 'Background'],
-  \ 'c': [':ColorToggle', 'Color'],
+  \ 'c': [':ColorizerToggle', 'Colorizer'],
   \ 'g': [':Goyo', 'Goyo'],
   \ 'i': [':IndentGuidesToggle', 'IndentGuides'],
   \ 'p': [':set invpaste', 'Paste'],
