@@ -15,8 +15,6 @@ function! PackInit() abort
   call minpac#add('kjwon15/vim-transparent', {'type': 'opt'})
   call minpac#add('itchyny/lightline.vim', {'type': 'opt'})
     call minpac#add('k07e/lightline-photon.vim', {'type': 'opt'})
-  call minpac#add('ryanoasis/vim-devicons', {'type': 'opt'})
-  call minpac#add('mhinz/vim-startify', {'type': 'opt'})
   " call minpac#add('Yggdroot/indentLine', {'type': 'opt'})
   call minpac#add('chrisbra/Colorizer', {'type': 'opt'})
   " call minpac#add('jeffkreeftmeijer/vim-dim', {'type': 'opt'})
@@ -38,7 +36,6 @@ function! PackInit() abort
     call minpac#add('prabirshrestha/asyncomplete-lsp.vim', {'type': 'opt'})
   call minpac#add('tpope/vim-commentary', {'type': 'opt'})
   call minpac#add('sheerun/vim-polyglot', {'type': 'opt'})
-  call minpac#add('ctrlpvim/ctrlp.vim', {'type': 'opt'})
   call minpac#add('hrsh7th/vim-vsnip', {'type': 'opt'})
     call minpac#add('hrsh7th/vim-vsnip-integ', {'type': 'opt'})
   call minpac#add('liuchengxu/vim-which-key', {'type': 'opt'})
@@ -49,6 +46,13 @@ function! PackInit() abort
   call minpac#add('junegunn/vim-easy-align', {'type': 'opt'})
   call minpac#add('907th/vim-auto-save', {'type': 'opt'})
   call minpac#add('vim-jp/vimdoc-ja', {'type': 'opt'})
+
+  " DevIcons
+    " Look
+    call minpac#add('mhinz/vim-startify', {'type': 'opt'})
+    " Editor
+    call minpac#add('ctrlpvim/ctrlp.vim', {'type': 'opt'})
+  call minpac#add('ryanoasis/vim-devicons', {'type': 'opt'})
 
   " Language Server
   call minpac#add('prabirshrestha/vim-lsp', {'type': 'opt'})
@@ -73,8 +77,6 @@ else
   call execute('source ' . g:setting_dir . '/photon.vim')
   call execute('source ' . g:setting_dir . '/transparent.vim')
   call execute('source ' . g:setting_dir . '/lightline.vim')
-  call execute('source ' . g:setting_dir . '/devicons.vim')
-  call execute('source ' . g:setting_dir . '/startify.vim')
   " call execute('source ' . g:setting_dir . '/indentLine.vim')
   call execute('source ' . g:setting_dir . '/Colorizer.vim')
   " call execute('source ' . g:setting_dir . '/dim.vim')
@@ -94,7 +96,6 @@ else
   call execute('source ' . g:setting_dir . '/asyncomplete.vim')
   call execute('source ' . g:setting_dir . '/commentary.vim')
   call execute('source ' . g:setting_dir . '/polyglot.vim')
-  call execute('source ' . g:setting_dir . '/ctrlp.vim')
   call execute('source ' . g:setting_dir . '/which-key.vim')
   call execute('source ' . g:setting_dir . '/quickrun.vim')
   call execute('source ' . g:setting_dir . '/surround.vim')
@@ -103,6 +104,13 @@ else
   call execute('source ' . g:setting_dir . '/easy-align.vim')
   call execute('source ' . g:setting_dir . '/auto-save.vim')
   call execute('source ' . g:setting_dir . '/vimdoc-ja.vim')
+
+  " DevIcons
+    " Look
+    call execute('source ' . g:setting_dir . '/startify.vim')
+    " Editor
+    call execute('source ' . g:setting_dir . '/ctrlp.vim')
+  call execute('source ' . g:setting_dir . '/devicons.vim')
 
   " Language Server
   call execute('source ' . g:setting_dir . '/lsp.vim')
