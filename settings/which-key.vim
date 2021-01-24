@@ -55,6 +55,8 @@ let g:which_key_map.t = {
   \ '7': [':tabnext 7', 'Move to 7'],
   \ '8': [':tabnext 8', 'Move to 8'],
   \ '9': [':tabnext 9', 'Move to 9'],
+  \ 'c': [':tabclose', 'Close'],
+  \ 'e': [':tabedit | Startify', 'New'],
   \ 'n': [':tabnext', 'Next'],
   \ 'p': [':tabprevious', 'Previous'],
   \ }
