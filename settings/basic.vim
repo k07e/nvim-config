@@ -27,5 +27,6 @@ let &undodir = s:undofile_dir
 let &viminfo = g:cache_dir . '/viminfo'
 
 set backup
+set mouse=a
 set swapfile
 set undofile
