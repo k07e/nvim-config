@@ -53,6 +53,9 @@ function! PackInit() abort
   " Language Server
   call minpac#add('prabirshrestha/vim-lsp', {'type': 'opt'})
     call minpac#add('mattn/vim-lsp-settings', {'type': 'opt'})
+
+  " Vim Script
+  call minpac#add('vim-jp/vital.vim', {'type': 'opt'})
 endfunction
 
 if !exists('g:loaded_minpac')
@@ -103,6 +106,9 @@ else
 
   " Language Server
   call execute('source ' . g:setting_dir . '/lsp.vim')
+
+  " Vim Script
+  call execute('source ' . g:setting_dir . '/vital.vim')
 endif
 
 function! PostPackUpdate()
