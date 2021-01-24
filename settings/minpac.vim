@@ -2,6 +2,7 @@ let s:this_file   = resolve(expand('<sfile>:p'))
 let s:this_dir = fnamemodify(s:this_file, ':h')
 
 let &packpath = g:cache_dir
+let &runtimepath = &runtimepath . ',' . g:base_dir
 
 packadd minpac
 
@@ -16,9 +17,10 @@ function! PackInit() abort
   call minpac#add('itchyny/lightline.vim', {'type': 'opt'})
     call minpac#add('k07e/lightline-photon.vim', {'type': 'opt'})
   " call minpac#add('Yggdroot/indentLine', {'type': 'opt'})
-  call minpac#add('chrisbra/Colorizer', {'type': 'opt'})
+  " call minpac#add('chrisbra/Colorizer', {'type': 'opt'})
   " call minpac#add('jeffkreeftmeijer/vim-dim', {'type': 'opt'})
   call minpac#add('nathanaelkane/vim-indent-guides', {'type': 'opt'})
+  call minpac#add('norcalli/nvim-colorizer.lua', {'type': 'opt'})
 
   " Git
   call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
@@ -78,9 +80,10 @@ else
   call execute('source ' . g:setting_dir . '/transparent.vim')
   call execute('source ' . g:setting_dir . '/lightline.vim')
   " call execute('source ' . g:setting_dir . '/indentLine.vim')
-  call execute('source ' . g:setting_dir . '/Colorizer.vim')
+  " call execute('source ' . g:setting_dir . '/Colorizer.vim')
   " call execute('source ' . g:setting_dir . '/dim.vim')
   call execute('source ' . g:setting_dir . '/indent-guides.vim')
+  packadd nvim-colorizer.lua | lua require 'colorizer-config'
 
   " Git
   call execute('source ' . g:setting_dir . '/fugitive.vim')
