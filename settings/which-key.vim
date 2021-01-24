@@ -32,7 +32,7 @@ let g:which_key_map.p = {
   \ 'u': [':PackUpdate', 'Update'],
   \ }
 
-let g:which_key_map.t = {
+let g:which_key_map.T = {
   \ 'name': '+Toggle',
   \ 'a': [':AutoSaveToggle', 'AutoSave'],
   \ 'b': [':call PhotonToggle()', 'Background'],
